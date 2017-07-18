@@ -63,7 +63,7 @@
               <text value="Turni"/>
             </properties>
           </component>
-          <component id="49957" class="javax.swing.JTextField" binding="Nometxt">
+          <component id="49957" class="javax.swing.JTextField" binding="nometxt">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -71,7 +71,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="41c32" class="javax.swing.JTextField" binding="Costotxt">
+          <component id="41c32" class="javax.swing.JTextField" binding="costotxt">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -111,7 +111,7 @@
               <text value="Back"/>
             </properties>
           </component>
-          <component id="220b6" class="javax.swing.JButton" binding="HOMEButton" default-binding="true">
+          <component id="220b6" class="javax.swing.JButton" binding="homeButton">
             <constraints>
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -127,7 +127,7 @@
               <text value="Conferma"/>
             </properties>
           </component>
-          <component id="86ad7" class="javax.swing.JTextArea" binding="descrizione">
+          <component id="86ad7" class="javax.swing.JTextArea" binding="descrizionetxt">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>

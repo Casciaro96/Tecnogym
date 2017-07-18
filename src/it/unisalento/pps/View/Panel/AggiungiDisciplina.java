@@ -7,16 +7,28 @@ import javax.swing.*;
  */
 public class AggiungiDisciplina {
     private JPanel aggiungiDisciplina;
-    private JTextField Nometxt;
-    private JTextField Descrizionetxt;
-    private JTextField Costotxt;
+    private JTextField nometxt;
+    private JTextField costotxt;
     private JTextField numLivelli;
     private JTextField numTurno;
     private JTextField nomIstruttore;
     private JButton backButton;
-    private JButton HOMEButton;
+    private JButton homeButton;
     private JButton confermaButton;
-    private JTextArea descrizione;
+
+    public JTextField getNometxt() {
+        return nometxt;
+    }
+
+    public JTextField getCostotxt() {
+        return costotxt;
+    }
+
+    public JButton getHomeButton() {
+        return homeButton;
+    }
+
+    private JTextArea descrizionetxt;
 
     public AggiungiDisciplina() {
 
@@ -29,16 +41,8 @@ public class AggiungiDisciplina {
         return aggiungiDisciplina;
     }
 
-    public JTextField getNometxt() {
-        return Nometxt;
-    }
-
-    public JTextField getDescrizionetxt() {
-        return Descrizionetxt;
-    }
-
-    public JTextField getCostotxt() {
-        return Costotxt;
+    public JTextArea getDescrizionetxt() {
+        return descrizionetxt;
     }
 
     public JTextField getNumLivelli() {
@@ -52,4 +56,15 @@ public class AggiungiDisciplina {
     public JTextField getNomIstruttore() {
         return nomIstruttore;
     }
+
+    public JButton getBackButton() {
+        return backButton;
+    }
+
+
+
+    public JButton getConfermaButton() {
+        return confermaButton;
+    }
+
 }

@@ -12,7 +12,7 @@ public class Main {
 
 
         Frame frame = new Frame();
-        
+
         //ciao a tutti
 
         DisciplinaBusiness business = new DisciplinaBusiness();
