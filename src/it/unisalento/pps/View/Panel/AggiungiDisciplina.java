@@ -33,26 +33,34 @@ public class AggiungiDisciplina {
     public AggiungiDisciplina() {
 
         aggiungiDisciplina.getUI();
-        aggiungiDisciplina.setVisible(true);
+        aggiungiDisciplina.setVisible(false);
 
     }
 
     public JPanel getAggiungiDisciplina() {
         return aggiungiDisciplina;
     }
+<<<<<<< Updated upstream
 
     public JTextArea getDescrizionetxt() {
         return descrizionetxt;
+=======
+    public JTextField getNometxt() {
+        return Nometxt;
     }
-
+    public JTextField getDescrizionetxt() {
+        return Descrizionetxt;
+    }
+    public JTextField getCostotxt() {
+        return Costotxt;
+>>>>>>> Stashed changes
+    }
     public JTextField getNumLivelli() {
         return numLivelli;
     }
-
     public JTextField getNumTurno() {
         return numTurno;
     }
-
     public JTextField getNomIstruttore() {
         return nomIstruttore;
     }
