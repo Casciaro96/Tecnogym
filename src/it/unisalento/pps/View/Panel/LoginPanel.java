@@ -2,29 +2,24 @@ package it.unisalento.pps.View.Panel;
 
 import javax.swing.*;
 
-/**
- * Created by SARA on 04/07/2017.
- */
+
 public class LoginPanel {
     private JPanel loginPanel;
-    private JButton backButton;
     private JButton loginButton;
     private JTextField textUsername;
-    private JTextField textPassword;
     private JButton signInButton;
+    private JPasswordField passwordField1;
 
     public LoginPanel() {
 
         loginPanel.getUI();
-        loginPanel.setVisible(false);
+        loginPanel.setVisible(true);
 
     }
+
 
     public JPanel getLoginPanel() {
         return loginPanel;
-    }
-    public JButton getBackButton() {
-        return backButton;
     }
     public JButton getLoginButton() {
         return loginButton;
@@ -32,10 +27,10 @@ public class LoginPanel {
     public JTextField getTextUsername() {
         return textUsername;
     }
-    public JTextField getTextPassword() {
-        return textPassword;
-    }
     public JButton getSignInButton() {
         return signInButton;
+    }
+    public JPasswordField getPasswordField1() {
+        return passwordField1;
     }
 }

@@ -1,5 +1,7 @@
 package it.unisalento.pps.Model;
 
+import it.unisalento.pps.DAO.TesseratoDAO;
+
 public class Tesserato extends Utente {
 	private String nome;
 	private String cognome;
@@ -64,5 +66,20 @@ public void setCodicecarta(int codicecarta) {
 }
    
 
+
+/*public Tesserato registrazione(String username, String password, String nome, String cognome, String email, int recapito, int codicecarta) {
+
+	TesseratoDAO tDAO = new TesseratoDAO();
+	return tDAO.registrazione(username, password, nome, cognome, email, recapito, codicecarta);
+}*/
+
+	public boolean registrazione(Tesserato tesserato) {
+
+		TesseratoDAO tDAO = new TesseratoDAO();
+		return tDAO.registrazione(tesserato);
+	}
+
+
 	
 }
+

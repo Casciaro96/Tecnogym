@@ -12,6 +12,7 @@ public class SportPanel {
         sportPanel.setVisible(false);
     }
 
+
     public JPanel getSportPanel() {
         return sportPanel;
     }
@@ -23,4 +24,6 @@ public class SportPanel {
     public JButton getVolley() {
         return Volley;
     }
+
 }
+

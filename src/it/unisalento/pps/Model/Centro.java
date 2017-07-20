@@ -1,5 +1,7 @@
 package it.unisalento.pps.Model;
 
+import it.unisalento.pps.DAO.CentroDAO;
+
 public class Centro {
 	public String sitoweb;
 	public String nome;
@@ -49,6 +51,11 @@ public class Centro {
 	public void setRecapito(int recapito) {
 		this.recapito = recapito;
 	}
-	
+
+	public Centro prendiinfo() {
+		CentroDAO cDAO = new CentroDAO();
+		return cDAO.prendiinfo();
+
+	}
 	
 }

@@ -2,9 +2,7 @@ package it.unisalento.pps.View.Panel;
 
 import javax.swing.*;
 
-/**
- * Created by SARA on 18/07/2017.
- */
+
 public class AggiungiDisciplina {
     private JPanel aggiungiDisciplina;
     private JTextField nometxt;
@@ -15,6 +13,22 @@ public class AggiungiDisciplina {
     private JButton backButton;
     private JButton homeButton;
     private JButton confermaButton;
+
+
+
+
+
+    public AggiungiDisciplina() {
+
+        aggiungiDisciplina.getUI();
+        aggiungiDisciplina.setVisible(false);
+
+    }
+
+
+
+
+
 
     public JTextField getNometxt() {
         return nometxt;
@@ -29,13 +43,6 @@ public class AggiungiDisciplina {
     }
 
     private JTextArea descrizionetxt;
-
-    public AggiungiDisciplina() {
-
-        aggiungiDisciplina.getUI();
-        aggiungiDisciplina.setVisible(true);
-
-    }
 
     public JPanel getAggiungiDisciplina() {
         return aggiungiDisciplina;

@@ -31,7 +31,6 @@ public class ActionDisciplina implements ActionListener {
 
             String nome = frame.getAggiungiDisciplina().getNometxt().getText();
             String descrizione = frame.getAggiungiDisciplina().getDescrizionetxt().getText();
-
             int costo = Integer.parseInt(frame.getAggiungiDisciplina().getCostotxt().getText());
             int livello = Integer.parseInt(frame.getAggiungiDisciplina().getNumLivelli().getText());
             int turno = Integer.parseInt(frame.getAggiungiDisciplina().getNumTurno().getText());

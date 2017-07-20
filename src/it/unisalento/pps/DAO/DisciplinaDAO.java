@@ -26,6 +26,7 @@ private static DisciplinaDAO instance;
 		while(i.hasNext()) {
 			String riga[] = i.next();
 			Disciplina d = new Disciplina();
+			d.setIdDisciplina(Integer.parseInt(riga[0]));
 			d.setNome(riga[1]);
 			d.setDescrizione(riga[2]);
 			d.setCosto(Integer.parseInt(riga[3]));
@@ -68,6 +69,7 @@ private static DisciplinaDAO instance;
 		ArrayList<String[]> result = DbConnection.getInstance().eseguiQuery(sql);
 		if (result.size()==0) return null;
 		String[] riga = result.get(0);
+		d.setIdDisciplina(Integer.parseInt(riga[0]));
 		d.setNome(riga[1]);
 		d.setDescrizione(riga[2]);
 		d.setCosto(Integer.parseInt(riga[3]));

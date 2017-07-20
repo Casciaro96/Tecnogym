@@ -2,6 +2,8 @@ package it.unisalento.pps.Model;
 
 import it.unisalento.pps.DAO.UtenteDAO;
 
+import java.util.ArrayList;
+
 public class Utente {
  private int idUtente;
  private String username;
@@ -52,11 +54,12 @@ public class Utente {
  public void setRuolo(String ruolo) {
   this.ruolo = ruolo;
  }
- 
- public static Utente trovaUtente(String username,String password) {
-		UtenteDAO uDAO = new UtenteDAO();
-		return uDAO.trovabyUserPwd(username,password);
-	}
+
+
+    public boolean trovabyUserPwd(String username, String password) {
+     UtenteDAO uDAO = new UtenteDAO();
+     return uDAO.trovabyUserPwd(username,password);
+    }
 
 
 
