@@ -26,12 +26,13 @@ private static DisciplinaDAO instance;
 		while(i.hasNext()) {
 			String riga[] = i.next();
 			Disciplina d = new Disciplina();
+			d.setIdDisciplina(Integer.parseInt(riga[0]));
 			d.setNome(riga[1]);
 			d.setDescrizione(riga[2]);
-			d.setCosto(Integer.parseInt(riga[3]));
-			d.setLivello(Integer.parseInt(riga[4]));
-			d.setTurno(Integer.parseInt(riga[5]));
-			d.setIdIstruttore(Integer.parseInt(riga[6]));
+			d.setCosto(riga[3]);
+			d.setLivello(riga[4]);
+			d.setTurno(riga[5]);
+			d.setIstruttore(riga[6]);
 			disciplina.add(d);
 		}
 			return disciplina;
@@ -42,8 +43,8 @@ private static DisciplinaDAO instance;
 
 		ArrayList<String[]> esito = DbConnection.getInstance().eseguiQuery("SELECT * FROM disciplina WHERE nome='"+disciplina.getNome()+"' AND livello='"+disciplina.getLivello()+"' ");
 				if (esito.size()==1) return false;
-				String sql = "INSERT INTO disciplina (nome,descrizione,costo,livello,turno,idIstruttore) VALUES ('"+disciplina.getNome()+"','"+disciplina.getDescrizione()+"',"
-						+ "'"+disciplina.getCosto()+"','"+disciplina.getLivello()+"','"+disciplina.getTurno()+"','"+disciplina.getIdIstruttore()+"')";
+				String sql = "INSERT INTO disciplina (nome,descrizione,costo,livello,turno,istruttore) VALUES ('"+disciplina.getNome()+"','"+disciplina.getDescrizione()+"',"
+						+ "'"+disciplina.getCosto()+"','"+disciplina.getLivello()+"','"+disciplina.getTurno()+"','"+disciplina.getIstruttore()+"')";
 			 return DbConnection.getInstance().eseguiAggiornamento(sql);
 	
 	}
@@ -68,13 +69,14 @@ private static DisciplinaDAO instance;
 		ArrayList<String[]> result = DbConnection.getInstance().eseguiQuery(sql);
 		if (result.size()==0) return null;
 		String[] riga = result.get(0);
+		d.setIdDisciplina(Integer.parseInt(riga[0]));
 		d.setNome(riga[1]);
 		d.setDescrizione(riga[2]);
-		d.setCosto(Integer.parseInt(riga[3]));
-		d.setLivello(Integer.parseInt(riga[4]));
-		d.setTurno(Integer.parseInt(riga[5]));
-		d.setIdIstruttore(Integer.parseInt(riga[6]));
-		System.out.print("Nome Disciplina: "+ d.getNome() +"\nDescrizione: "+ d.getDescrizione() +"\nCosto: "+ d.getCosto() +"€ \nLivello: "+ d.getLivello()+"\nIstruttore: " +d.getIdIstruttore()+" " );
+		d.setCosto(riga[3]);
+		d.setLivello(riga[4]);
+		d.setTurno(riga[5]);
+		d.setIstruttore(riga[6]);
+		System.out.print("Nome Disciplina: "+ d.getNome() +"\nDescrizione: "+ d.getDescrizione() +"\nCosto: "+ d.getCosto() +"€ \nLivello: "+ d.getLivello()+"\nIstruttore: " +d.getIstruttore()+" " );
 		return d;
 	}
 

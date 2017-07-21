@@ -27,9 +27,11 @@
                   <contentAreaFilled value="false"/>
                   <focusPainted value="true"/>
                   <horizontalAlignment value="0"/>
-                  <horizontalTextPosition value="0"/>
+                  <horizontalTextPosition value="11"/>
                   <icon value="Basketok1.png"/>
                   <text value=""/>
+                  <toolTipText value=""/>
+                  <verticalAlignment value="0"/>
                 </properties>
               </component>
               <component id="5ac7" class="javax.swing.JButton" default-binding="true">

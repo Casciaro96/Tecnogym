@@ -7,14 +7,14 @@ import java.util.ArrayList;
 
 public class DisciplinaBusiness {
 
-    public Disciplina aggiungiDisciplina(String nome, String descrizione, int costo, int livello, int turno, int idIstruttore) {
+    public Disciplina aggiungiDisciplina(String nome, String descrizione, String costo, String livello, String turno, String istruttore) {
 
 
             Disciplina d = new Disciplina();
             d.setNome(nome);
             d.setCosto(costo);
             d.setDescrizione(descrizione);
-            d.setIdIstruttore(idIstruttore);
+            d.setIstruttore(istruttore);
             d.setLivello(livello);
             d.setTurno(turno);
             boolean esito = d.aggiungidisciplina(d);

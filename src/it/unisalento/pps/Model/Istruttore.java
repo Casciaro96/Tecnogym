@@ -1,13 +1,15 @@
 package it.unisalento.pps.Model;
 
+import it.unisalento.pps.DAO.IstruttoreDAO;
+
+import java.util.ArrayList;
+
 public class Istruttore extends Utente {
 	private String nome;
 	private String cognome;
 	private String email;
 	private int recapito;
 	private int stipendio;
-	//TODO possibilit� di implementare codice carta
-	
 
 	public Istruttore (String nome, String cognome, String email, int recapito, int stipendio) {
 		this.nome = nome;
@@ -54,6 +56,11 @@ public class Istruttore extends Utente {
 	}
 	public void setStipendio(int stipendio) {
 		this.stipendio = stipendio;
+	}
+
+	public ArrayList<Istruttore> cbIstruttore() {
+		IstruttoreDAO cbIstruttore = new IstruttoreDAO();
+		return cbIstruttore.elencoistruttore();
 	}
 	
 }
