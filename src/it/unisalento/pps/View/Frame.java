@@ -41,6 +41,7 @@ public class Frame extends JFrame {
         centerPanel.add(gestorePanel.getGestorePanel());
         centerPanel.add(homePanel.getHomePanel());
 
+
         southPanel.add(informazioniPanel.getInformazioniPanel());
 
         primaryPanel.add(centerPanel, BorderLayout.CENTER);

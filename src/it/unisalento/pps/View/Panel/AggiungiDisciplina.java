@@ -71,7 +71,7 @@ public class AggiungiDisciplina {
     }
 
     private JTextArea descrizionetxt;
-<<<<<<< HEAD
+
 
     public AggiungiDisciplina() {
 
@@ -79,20 +79,19 @@ public class AggiungiDisciplina {
         aggiungiDisciplina.setVisible(false);
 
     }
-=======
+
     private JComboBox comboBoxLivello;
     private JComboBox comboBoxTurno;
     private JComboBox comboBoxIstruttore;
->>>>>>> master
+
 
     public JPanel getAggiungiDisciplina() {
         return aggiungiDisciplina;
     }
-<<<<<<< Updated upstream
 
     public JTextArea getDescrizionetxt() {
         return descrizionetxt;
-=======
+
     public JTextField getNometxt() {
         return Nometxt;
     }
@@ -101,7 +100,7 @@ public class AggiungiDisciplina {
     }
     public JTextField getCostotxt() {
         return Costotxt;
->>>>>>> Stashed changes
+
     }
     public JTextField getNumLivelli() {
         return numLivelli;
