@@ -1,9 +1,11 @@
 package it.unisalento.pps.DAO;
 
 import it.unisalento.pps.DbConnection.DbConnection;
+import it.unisalento.pps.Model.Livello;
 import it.unisalento.pps.Model.Turno;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class TurnoDAO {
 
@@ -40,5 +42,20 @@ public class TurnoDAO {
         t.setOrainizio(Integer.parseInt(riga[3]));
         t.setOrafine(Integer.parseInt(riga[4]));
         return t;
+    }
+
+    public ArrayList<Turno> elencoturno() {
+        ArrayList<String[]> risultato = DbConnection.getInstance().eseguiQuery("SELECT * FROM turno");
+        ArrayList<Turno> turni = new ArrayList<>();
+        Iterator<String[]> i = risultato.iterator();
+        while(i.hasNext()){
+            String riga[] = i.next();
+            Turno t = new Turno();
+            t.setGiorno(riga[1]);
+            t.setOrainizio(Integer.parseInt(riga[2]));
+            t.setOrafine(Integer.parseInt(riga[3]));
+            turni.add(t);
+        }
+        return turni;
     }
 }

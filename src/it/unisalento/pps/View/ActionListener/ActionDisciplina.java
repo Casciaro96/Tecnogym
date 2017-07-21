@@ -1,13 +1,8 @@
 package it.unisalento.pps.View.ActionListener;
 
 import it.unisalento.pps.Business.DisciplinaBusiness;
-import it.unisalento.pps.Model.Istruttore;
-import it.unisalento.pps.View.*;
 import it.unisalento.pps.View.Frame;
-import it.unisalento.pps.View.Panel.AggiungiDisciplina;
 
-import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,18 +20,19 @@ public class ActionDisciplina implements ActionListener {
 
         String sorgenteEvento = e.getActionCommand();
 
+
         if(sorgenteEvento.equals(AGGIUNGI)){
 
             DisciplinaBusiness disciplina = new DisciplinaBusiness();
 
             String nome = frame.getAggiungiDisciplina().getNometxt().getText();
             String descrizione = frame.getAggiungiDisciplina().getDescrizionetxt().getText();
-            int costo = Integer.parseInt(frame.getAggiungiDisciplina().getCostotxt().getText());
-            int livello = Integer.parseInt(frame.getAggiungiDisciplina().getNumLivelli().getText());
-            int turno = Integer.parseInt(frame.getAggiungiDisciplina().getNumTurno().getText());
-            int idIstruttore = Integer.parseInt(frame.getAggiungiDisciplina().getNomIstruttore().getText());
+            String costo = frame.getAggiungiDisciplina().getCostotxt().getText();
+            String livello = frame.getAggiungiDisciplina().getComboBoxLivello().getSelectedItem().toString();
+            String turno = frame.getAggiungiDisciplina().getComboBoxTurno().getSelectedItem().toString();
+            String istruttore = frame.getAggiungiDisciplina().getComboBoxIstruttore().getSelectedItem().toString();
 
-            disciplina.aggiungiDisciplina(nome, descrizione, costo, livello, turno, idIstruttore);
+            disciplina.aggiungiDisciplina(nome, descrizione, costo, livello, turno, istruttore);
         }
 
     }

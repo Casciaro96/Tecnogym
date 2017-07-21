@@ -17,8 +17,13 @@ public class TesseratoBUSINESS {
 		t.setEmail(email);
 		t.setRecapito(recapito);
 		t.setCodicecarta(codicecarta);
+		if(username==null||password==null||nome==null||cognome==null||email==null||recapito==0||codicecarta==0) {
+			JOptionPane.showMessageDialog(null, "Per favore riempire tutti i campi");
+			return false;
+		}
 		boolean risultato = t.registrazione(t);
-		return risultato;
+		JOptionPane.showMessageDialog(null, "Richiesta inviata. Ti verranno comunicate per email le tue credenziali entro qualche ora");
+		return true;
 	}
 
 

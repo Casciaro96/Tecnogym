@@ -1,6 +1,9 @@
 package it.unisalento.pps.Model;
 
 import it.unisalento.pps.DAO.LivelloDAO;
+import it.unisalento.pps.DbConnection.DbConnection;
+
+import java.util.ArrayList;
 
 public class Livello {
 	private int idLivello;
@@ -31,7 +34,7 @@ public class Livello {
 	}
 
 
-	public Livello findbyidLivello(int idLivello) {
+	public  ArrayList<Livello> findbyidLivello(int idLivello) {
 
 		LivelloDAO lDAO = new LivelloDAO();
 		return lDAO.findbyidLivello(idLivello);
@@ -43,7 +46,10 @@ public class Livello {
 		return lDAO.findbynomelivello(nomeLivello);
 	}
 
-
+	public ArrayList<Livello> cbLivello() {
+		LivelloDAO cdLivello = new LivelloDAO();
+		return cdLivello.elencolivello();
+	}
 
 
 

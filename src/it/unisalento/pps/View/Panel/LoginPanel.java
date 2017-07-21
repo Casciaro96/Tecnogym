@@ -9,11 +9,12 @@ public class LoginPanel {
     private JTextField textUsername;
     private JButton signInButton;
     private JPasswordField passwordField1;
+    private JButton homeButton;
 
     public LoginPanel() {
 
         loginPanel.getUI();
-        loginPanel.setVisible(true);
+        loginPanel.setVisible(false);
 
     }
 
@@ -33,4 +34,6 @@ public class LoginPanel {
     public JPasswordField getPasswordField1() {
         return passwordField1;
     }
+
+
 }

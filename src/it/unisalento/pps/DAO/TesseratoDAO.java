@@ -16,8 +16,7 @@ public class TesseratoDAO {
 
 	public boolean registrazione(Tesserato tesserato) {
 
-		String sql = "INSERT INTO utente(username,password,nome,cognome,recapito,codicecarta) VALUES('" + tesserato.getUsername() + "''" + tesserato.getPassword() + "''" + tesserato.getNome() + "''" + tesserato.getCognome() + "'" +
-				"'" + tesserato.getEmail() + "''" + tesserato.getRecapito() + "''" + tesserato.getCodicecarta() + "'";
+		String sql = "INSERT INTO utente(username,password,ruolo,nome,cognome,email,recapito,codicecarta,statoregistrazione) VALUES('"+ tesserato.getUsername()+"','"+tesserato.getPassword()+"','tesserato','"+tesserato.getNome()+"','"+tesserato.getCognome()+"','"+tesserato.getEmail()+"','"+tesserato.getRecapito()+"','"+tesserato.getCodicecarta()+"','In attesa di conferma')";
 		boolean risultato = DbConnection.getInstance().eseguiAggiornamento(sql);
 		return risultato;
 	}

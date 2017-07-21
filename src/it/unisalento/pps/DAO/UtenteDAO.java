@@ -18,7 +18,7 @@ public class UtenteDAO {
 
 	public boolean trovabyUserPwd(String username, String password)
 	{
-		Utente u = new Utente();
+		//Utente u = new Utente();
 		ArrayList<String[]> risultato = DbConnection.getInstance().eseguiQuery("SELECT * FROM Utente WHERE Username='"+username+"' and Password='"+password+"'");
 		if(risultato.isEmpty())
 			return false;

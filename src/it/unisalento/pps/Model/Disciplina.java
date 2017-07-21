@@ -8,30 +8,24 @@ public class Disciplina {
 	private int idDisciplina;
 	private String nome;
 	private String descrizione;
-	private int costo;
-	private int livello;
-	private int turno;
-	private int idIstruttore;
+	private String costo;
+	private String livello;
+	private String turno;
+	private String istruttore;
 
-	public Disciplina (int idDisciplina, String nome, String descrizione, int costo, int livello, int turno, int idIstruttore){
+	public Disciplina (int idDisciplina, String nome, String descrizione, String costo, String livello, String turno, String istruttore){
 		this.idDisciplina = idDisciplina;
 		this.nome = nome;
 		this.descrizione = descrizione;
 		this.costo = costo;
 		this.livello = livello;
 		this.turno = turno;
-		this.idIstruttore = idIstruttore;
+		this.istruttore = istruttore;
 	}
 	
 	
 	
-	public int getIdIstruttore() {
-		return idIstruttore;
-	}
 
-	public void setIdIstruttore(int idIstruttore) {
-		this.idIstruttore = idIstruttore;
-	}
 
 	public Disciplina (){
 		
@@ -61,28 +55,36 @@ public class Disciplina {
 		this.descrizione = descrizione;
 	}
 
-	public int getCosto() {
+	public String getCosto() {
 		return costo;
 	}
 
-	public void setCosto(int costo) {
-		this.costo = costo;
-	}
-
-	public int getLivello() {
+	public String getLivello() {
 		return livello;
 	}
 
-	public void setLivello(int livello) {
-		this.livello = livello;
-	}
-
-	public int getTurno() {
+	public String getTurno() {
 		return turno;
 	}
 
-	public void setTurno(int turno) {
+	public String getIstruttore() {
+		return istruttore;
+	}
+
+	public void setCosto(String costo) {
+		this.costo = costo;
+	}
+
+	public void setLivello(String livello) {
+		this.livello = livello;
+	}
+
+	public void setTurno(String turno) {
 		this.turno = turno;
+	}
+
+	public void setIstruttore(String istruttore) {
+		this.istruttore = istruttore;
 	}
 
 	public boolean aggiungidisciplina(Disciplina disciplina) {

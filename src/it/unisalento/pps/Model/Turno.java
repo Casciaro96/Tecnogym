@@ -2,6 +2,8 @@ package it.unisalento.pps.Model;
 
 import it.unisalento.pps.DAO.TurnoDAO;
 
+import java.util.ArrayList;
+
 public class Turno {
 	private int idTurno;
 	private String giorno;
@@ -62,6 +64,11 @@ public class Turno {
 		TurnoDAO tuDAO = new TurnoDAO();
 		return tuDAO.findbynometurno(giorno,orainizio,orafine);
 	}
+
+	public ArrayList<Turno> cbTurno() {
+	    TurnoDAO cbTurno = new TurnoDAO();
+	    return cbTurno.elencoturno();
+    }
 
 
 
