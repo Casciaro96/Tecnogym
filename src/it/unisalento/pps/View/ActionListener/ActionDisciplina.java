@@ -10,6 +10,7 @@ public class ActionDisciplina implements ActionListener {
 
 
     public final static String AGGIUNGI = "Aggiungi_disciplina";
+
     Frame frame;
 
     public ActionDisciplina(Frame frame) {

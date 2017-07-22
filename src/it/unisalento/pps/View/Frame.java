@@ -2,6 +2,7 @@ package it.unisalento.pps.View;
 
 
 import it.unisalento.pps.View.ActionListener.ActionDisciplina;
+import it.unisalento.pps.View.ActionListener.ActionGestore;
 import it.unisalento.pps.View.ActionListener.ActionHome;
 import it.unisalento.pps.View.Panel.*;
 
@@ -40,8 +41,6 @@ public class Frame extends JFrame {
         centerPanel.add(sportPanel.getSportPanel());
         centerPanel.add(gestorePanel.getGestorePanel());
         centerPanel.add(homePanel.getHomePanel());
-
-
         southPanel.add(informazioniPanel.getInformazioniPanel());
 
         primaryPanel.add(centerPanel, BorderLayout.CENTER);
@@ -78,6 +77,22 @@ public class Frame extends JFrame {
         registrazionePanel.getConfermaRegistrazioneButton().addActionListener(actionlogin);
         registrazionePanel.getConfermaRegistrazioneButton().setActionCommand(ActionHome.CONFERMA);
 
+        ActionGestore actiongestore = new ActionGestore(this);
+        gestorePanel.getDisciplinaGestoreButton().addActionListener(actiongestore);
+        gestorePanel.getDisciplinaGestoreButton().setActionCommand(ActionGestore.AGGIUNGIDISCIPLINA);
+        gestorePanel.getLivelloGestoreButton().addActionListener(actiongestore);
+        gestorePanel.getLivelloGestoreButton().setActionCommand(ActionGestore.AGGIUNGILIVELLO);
+        gestorePanel.getTurnoGestoreButton().addActionListener(actiongestore);
+        gestorePanel.getTurnoGestoreButton().setActionCommand(ActionGestore.AGGIUNGITURNO);
+        gestorePanel.getIstruttoreGestoreButton().addActionListener(actiongestore);
+        gestorePanel.getIstruttoreGestoreButton().setActionCommand(ActionGestore.AGGIUNGIISTRUTTORE);
+        gestorePanel.getGestisciIscrizioniButton().addActionListener(actiongestore);
+        gestorePanel.getGestisciIscrizioniButton().setActionCommand(ActionGestore.GESTISCIISCRIZIONI);
+        gestorePanel.getGestisciNuoviUtentiButton().addActionListener(actiongestore);
+        gestorePanel.getGestisciNuoviUtentiButton().setActionCommand(ActionGestore.GESTISCINUOVIUTENTI);
+        gestorePanel.getGestisciModificheAllenamentiButton().addActionListener(actiongestore);
+        gestorePanel.getGestisciModificheAllenamentiButton().setActionCommand(ActionGestore.GESTISCIMODIFICHE);
+
     }
 
     public GestorePanel getGestorePanel() {
@@ -97,6 +112,8 @@ public class Frame extends JFrame {
     }
 
     public RegistrazionePanel getRegistazionePanel() {return registrazionePanel; }
+
+
 
     public JPanel getcenterPanel() {
         return centerPanel;

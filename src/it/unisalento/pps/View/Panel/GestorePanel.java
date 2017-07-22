@@ -4,8 +4,7 @@ package it.unisalento.pps.View.Panel;
 import javax.swing.*;
 
 public class GestorePanel {
-    private JPanel GestorePanel;
-    private JLabel messaggioBenenuto;
+    private JPanel gestorePanel;
     private JButton disciplinaGestoreButton;
     private JButton livelloGestoreButton;
     private JButton turnoGestoreButton;
@@ -16,17 +15,13 @@ public class GestorePanel {
 
 
     public GestorePanel() {
-        GestorePanel.getUI();
-        GestorePanel.setVisible(true);
+        gestorePanel.getUI();
+        gestorePanel.setVisible(true);
     }
 
 
     public JPanel getGestorePanel() {
-        return GestorePanel;
-    }
-
-    public JLabel getMessaggioBenenuto() {
-        return messaggioBenenuto;
+        return gestorePanel;
     }
 
     public JButton getDisciplinaGestoreButton() {

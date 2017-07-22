@@ -11,7 +11,7 @@ public class HomePanel {
 
     public HomePanel() {
         homePanel.getUI();
-        homePanel.setVisible(true);
+        homePanel.setVisible(false);
     }
 
     public JPanel getHomePanel() {
