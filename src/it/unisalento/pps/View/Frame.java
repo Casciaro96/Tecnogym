@@ -114,7 +114,6 @@ public class Frame extends JFrame {
     public RegistrazionePanel getRegistazionePanel() {return registrazionePanel; }
 
 
-
     public JPanel getcenterPanel() {
         return centerPanel;
     }

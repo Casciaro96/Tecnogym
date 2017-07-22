@@ -12,6 +12,10 @@ public class GestorePanel {
     private JButton gestisciIscrizioniButton;
     private JButton gestisciNuoviUtentiButton;
     private JButton gestisciModificheAllenamentiButton;
+    private JButton eliminaDisciplinaButton;
+    private JButton eliminaLivelloButton;
+    private JButton eliminaTurnoButton;
+    private JButton eliminaIstruttoreButton;
 
 
     public GestorePanel() {
@@ -50,6 +54,22 @@ public class GestorePanel {
 
     public JButton getGestisciModificheAllenamentiButton() {
         return gestisciModificheAllenamentiButton;
+    }
+
+    public JButton getEliminaDisciplinaButton() {
+        return eliminaDisciplinaButton;
+    }
+
+    public JButton getEliminaLivelloButton() {
+        return eliminaLivelloButton;
+    }
+
+    public JButton getEliminaTurnoButton() {
+        return eliminaTurnoButton;
+    }
+
+    public JButton getEliminaIstruttoreButton() {
+        return eliminaIstruttoreButton;
     }
 }
 

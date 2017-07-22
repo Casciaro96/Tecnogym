@@ -49,12 +49,16 @@ public class TurnoDAO {
         ArrayList<Turno> turni = new ArrayList<>();
         Iterator<String[]> i = risultato.iterator();
         while(i.hasNext()){
+            String space = " ";
+            String less = " - ";
             String riga[] = i.next();
             Turno t = new Turno();
-            t.setGiorno(riga[1]);
-            t.setOrainizio(Integer.parseInt(riga[2]));
-            t.setOrafine(Integer.parseInt(riga[3]));
+            t.setGiorno(riga[1].concat(space.concat(riga[2].concat(less.concat(riga[3])))));
+            //t.setOrainizio(Integer.parseInt(riga[2]));
+            //t.setOrafine(Integer.parseInt(riga[3]));
             turni.add(t);
+
+
         }
         return turni;
     }
