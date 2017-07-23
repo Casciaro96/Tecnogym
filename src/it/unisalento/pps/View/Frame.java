@@ -1,13 +1,13 @@
 package it.unisalento.pps.View;
 
 
-import it.unisalento.pps.View.ActionListener.ActionDisciplina;
-import it.unisalento.pps.View.ActionListener.ActionGestore;
-import it.unisalento.pps.View.ActionListener.ActionHome;
+import com.sun.xml.internal.bind.v2.TODO;
+import it.unisalento.pps.View.ActionListener.*;
 import it.unisalento.pps.View.Panel.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 
 public class Frame extends JFrame {
@@ -18,6 +18,8 @@ public class Frame extends JFrame {
     RegistrazionePanel registrazionePanel = new RegistrazionePanel();
     GestorePanel gestorePanel = new GestorePanel();
     HomePanel homePanel = new HomePanel();
+    LivelloPanel livellopanel = new LivelloPanel();
+    BasketPanel basketPanel = new BasketPanel();
 
     AggiungiDisciplina aggiungiDisciplina = new AggiungiDisciplina();
     JPanel centerPanel = new JPanel();
@@ -41,7 +43,10 @@ public class Frame extends JFrame {
         centerPanel.add(sportPanel.getSportPanel());
         centerPanel.add(gestorePanel.getGestorePanel());
         centerPanel.add(homePanel.getHomePanel());
+        centerPanel.add(basketPanel.getBasketPanel());
+
         southPanel.add(informazioniPanel.getInformazioniPanel());
+        centerPanel.add(livellopanel.getLivelloPanel());
 
         primaryPanel.add(centerPanel, BorderLayout.CENTER);
         primaryPanel.add(southPanel, BorderLayout.SOUTH);
@@ -62,6 +67,8 @@ public class Frame extends JFrame {
         ActionDisciplina actiondisciplina = new ActionDisciplina(this);
         aggiungiDisciplina.getConfermaButton().addActionListener(actiondisciplina);
         aggiungiDisciplina.getConfermaButton().setActionCommand(ActionDisciplina.AGGIUNGI);
+        aggiungiDisciplina.getBackButton().addActionListener(actiondisciplina);
+        aggiungiDisciplina.getBackButton().setActionCommand(ActionDisciplina.BACK);
 
         ActionHome actionlogin = new ActionHome(this);
 
@@ -93,6 +100,24 @@ public class Frame extends JFrame {
         gestorePanel.getGestisciModificheAllenamentiButton().addActionListener(actiongestore);
         gestorePanel.getGestisciModificheAllenamentiButton().setActionCommand(ActionGestore.GESTISCIMODIFICHE);
 
+        ActionLivello actionlivello = new ActionLivello(this);
+        livellopanel.getConfermaButton().addActionListener(actionlivello);
+        livellopanel.getConfermaButton().setActionCommand(ActionLivello.CONFERMA);
+        livellopanel.getBackButton().addActionListener(actionlivello);
+        livellopanel.getBackButton().setActionCommand(ActionLivello.BACK);
+
+        ActionTesserato actiontesserato = new ActionTesserato(this);
+        basketPanel.getIscrivitiButton().addActionListener(actiontesserato);
+        basketPanel.getIscrivitiButton().setActionCommand(ActionTesserato.ISCRIVITI);
+        //TODO aggiungere altri pallavolopanel etc allo stesso modo di sopra
+
+        ActionSport actionsport = new ActionSport(this);
+
+        sportPanel.getBasketButton().addActionListener(actionsport);
+        sportPanel.getBasketButton().setActionCommand(ActionSport.BASKET);
+
+
+
     }
 
     public GestorePanel getGestorePanel() {
@@ -112,6 +137,15 @@ public class Frame extends JFrame {
     }
 
     public RegistrazionePanel getRegistazionePanel() {return registrazionePanel; }
+
+    public LivelloPanel getLivellopanel() {
+        return livellopanel;
+    }
+
+    public BasketPanel getBasketPanel() {
+        return basketPanel;
+    }
+
 
 
     public JPanel getcenterPanel() {

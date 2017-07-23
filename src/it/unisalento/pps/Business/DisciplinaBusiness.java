@@ -29,7 +29,7 @@ public class DisciplinaBusiness {
 
 
 
-    public boolean eliminaDisciplina(String nome, int livello) {
+    public boolean eliminaDisciplina(String nome, int livello) { //TODO e anche qui
         try {
             Disciplina d = new Disciplina();
             d = d.findbyNomeLivello(nome, livello);
@@ -40,8 +40,6 @@ public class DisciplinaBusiness {
             JOptionPane.showMessageDialog(null, "La disciplina non esiste o è stata già cancellata");
             return false;
         }
-
-
 
     }
 
@@ -54,9 +52,5 @@ public class DisciplinaBusiness {
         return risultati;
     }
 
-
-
-	
-	
 
 }

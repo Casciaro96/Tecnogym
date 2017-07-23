@@ -80,6 +80,8 @@ public void setCodicecarta(int codicecarta) {
 	}
 
 
+
+
 	
 }
 

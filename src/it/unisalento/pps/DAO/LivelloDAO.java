@@ -60,5 +60,29 @@ public class LivelloDAO {
         return livelli;
     }
 
+    public ArrayList<Livello> findbyNomeDisciplina(String nomedisciplina) {
+
+        ArrayList<String[]> lista = DbConnection.getInstance().eseguiQuery("SELECT * FROM disciplina WHERE Nome='"+nomedisciplina+"'");
+        ArrayList<Livello> liv = new ArrayList<>();
+        Iterator<String[]> i = lista.iterator();
+
+        while(i.hasNext()) {
+            String riga[] = i.next();
+            Livello livello = new Livello();
+            livello.setNome(riga[4]);
+            liv.add(livello);
+        }
+        return liv;
+
+    }
+
+    public boolean aggiungiLivello(Livello nome) {
+        String sql = "INSERT INTO livello(nome) VALUES('"+nome.getNome()+"')";
+        boolean risultato = DbConnection.getInstance().eseguiAggiornamento(sql);
+        return risultato;
+
+
+
+    }
 
 }

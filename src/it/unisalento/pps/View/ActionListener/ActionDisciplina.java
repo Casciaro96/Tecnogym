@@ -10,6 +10,7 @@ public class ActionDisciplina implements ActionListener {
 
 
     public final static String AGGIUNGI = "Aggiungi_disciplina";
+    public final static String BACK = "Indietro";
 
     Frame frame;
 
@@ -35,6 +36,12 @@ public class ActionDisciplina implements ActionListener {
 
             disciplina.aggiungiDisciplina(nome, descrizione, costo, livello, turno, istruttore);
         }
+
+        if(sorgenteEvento.equals(BACK)) {
+            frame.getAggiungiDisciplina().getAggiungiDisciplina().setVisible(false);
+            frame.getGestorePanel().getGestorePanel().setVisible(true);
+        }
+
 
     }
 

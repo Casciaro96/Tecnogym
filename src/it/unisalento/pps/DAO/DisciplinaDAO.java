@@ -62,7 +62,7 @@ private static DisciplinaDAO instance;
 		
 
 		
-	public Disciplina findbyNomeLivello(String nome, int livello) {
+	public Disciplina findbyNomeLivello(String nome, int livello) { //TODO forse qui c'è un errore
 
 		Disciplina d = new Disciplina();
 		String sql = "SELECT * FROM disciplina WHERE nome='"+nome+"' AND livello='"+livello+"'";
@@ -79,8 +79,6 @@ private static DisciplinaDAO instance;
 		System.out.print("Nome Disciplina: "+ d.getNome() +"\nDescrizione: "+ d.getDescrizione() +"\nCosto: "+ d.getCosto() +"€ \nLivello: "+ d.getLivello()+"\nIstruttore: " +d.getIstruttore()+" " );
 		return d;
 	}
-
-
 
 }
 

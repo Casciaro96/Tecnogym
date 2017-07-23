@@ -26,7 +26,12 @@ public class UtenteDAO {
 			return true;
 		}
 	}
+	public boolean confermalogin(String username, String password) {
 
+		String sql = "INSERT INTO Utente(loggato) VALUES('1') WHERE Username='"+username+"'and Password='"+password+"'";
+		boolean esito = DbConnection.getInstance().eseguiAggiornamento(sql);
+		return esito;
+	}
 
 	
 	

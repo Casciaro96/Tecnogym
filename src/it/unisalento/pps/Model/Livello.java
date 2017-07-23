@@ -51,6 +51,16 @@ public class Livello {
 		return cdLivello.elencolivello();
 	}
 
+	public boolean aggiungiNuovoLivello(Livello livello) {
+		LivelloDAO lDAO = new LivelloDAO();
+		return lDAO.aggiungiLivello(livello);
+	}
+
+	public ArrayList<Livello> findbyNomeDisciplina(String nomedisciplina){
+		LivelloDAO livDAO = new LivelloDAO();
+		return livDAO.findbyNomeDisciplina(nomedisciplina);
+
+	}
 
 
 }

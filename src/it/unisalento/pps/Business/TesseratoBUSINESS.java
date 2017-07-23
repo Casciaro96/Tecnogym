@@ -1,5 +1,6 @@
 package it.unisalento.pps.Business;
 
+import it.unisalento.pps.Model.IscrizioneDisciplina;
 import it.unisalento.pps.Model.Tesserato;
 
 import javax.swing.*;
@@ -17,7 +18,7 @@ public class TesseratoBUSINESS {
 		t.setEmail(email);
 		t.setRecapito(recapito);
 		t.setCodicecarta(codicecarta);
-		if(username==null||password==null||nome==null||cognome==null||email==null||recapito==0||codicecarta==0) {
+		if (username == null || password == null || nome == null || cognome == null || email == null || recapito == 0 || codicecarta == 0) {
 			JOptionPane.showMessageDialog(null, "Per favore riempire tutti i campi");
 			return false;
 		}
@@ -26,10 +27,18 @@ public class TesseratoBUSINESS {
 		return true;
 	}
 
+	public boolean iscriviti(String utente, String nome, String livello, String turno, String pagamento, String stato) {
+		IscrizioneDisciplina is = new IscrizioneDisciplina();
+		is.setUtente(utente);
+		is.setDisciplina(nome);
+		is.setLivello(livello);
+		is.setTurno(turno);
+		is.setPagamento(pagamento);
+		is.setStato_iscrizione(stato);
+		//TODO controlli sul fatto che ppsso essere già iscritto
+		boolean risultato = is.iscrizione(is);
+		return true;
+	}
 
-
-
-	
-	
 }
 

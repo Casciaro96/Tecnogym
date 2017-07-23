@@ -3,6 +3,7 @@ package it.unisalento.pps.View.ActionListener;
 
 import it.unisalento.pps.Business.LoginBusiness;
 import it.unisalento.pps.Business.TesseratoBUSINESS;
+import it.unisalento.pps.Model.Tesserato;
 import it.unisalento.pps.Model.Utente;
 import it.unisalento.pps.View.Frame;
 import it.unisalento.pps.View.Panel.LoginPanel;
@@ -33,7 +34,6 @@ public class ActionHome implements ActionListener {
         String sorgenteEvento = e.getActionCommand();
 
         if (sorgenteEvento.equals(ACCEDI)) {
-
             frame.getLoginPanel().getLoginPanel().setVisible(true);
         }
 
@@ -43,13 +43,12 @@ public class ActionHome implements ActionListener {
             String pwd = frame.getLoginPanel().getPasswordField1().getText();
 
 
-            boolean esito = login.loggato(user, pwd);
+            boolean esito = login.loggati(user, pwd);
 
             if (esito == true) {
+                frame.getSportPanel().setNomeutente(user);
                 frame.getLoginPanel().getLoginPanel().setVisible(false);
                 frame.getSportPanel().getSportPanel().setVisible(true);
-
-
             }
         }
 

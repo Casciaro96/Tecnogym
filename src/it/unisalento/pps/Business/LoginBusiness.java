@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class LoginBusiness {
 
-    public boolean loggato(String username, String password) {
+    public boolean loggati(String username, String password) {
 
 
         if(username.isEmpty()||password.isEmpty()) {
@@ -21,6 +21,7 @@ public class LoginBusiness {
         u.setPassword(password);
         boolean esito =  u.trovabyUserPwd(username, password);
         if(esito==true) {
+           boolean confirm = u.confermalogin(username, password);
             JOptionPane.showMessageDialog(null, "Utente presente nel DB e loggato con successo");
             return true;
         }

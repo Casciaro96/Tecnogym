@@ -19,6 +19,12 @@ public class ActionGestore implements ActionListener{
     public final static String GESTISCINUOVIUTENTI = "Gestisci nuovi utenti";
     public final static String GESTISCIMODIFICHE = "Gestisci modifiche";
 
+    public final static String ELIMINADISCIPLINA = "Elimina disciplina";
+    public final static String ELIMINALIVELLO = "Elimina livello";
+    public final static String ELIMINATURNO = "Elimina turno";
+    public final static String ELIMINAISTRUTTORE = "Elimina istruttore";
+
+
     public ActionGestore(Frame frame) {
         this.frame = frame;
     }
@@ -31,6 +37,11 @@ public class ActionGestore implements ActionListener{
             frame.getGestorePanel().getGestorePanel().setVisible(false);
             frame.getAggiungiDisciplina().getAggiungiDisciplina().setVisible(true);
         }
+
+        if(sorgenteEvento.equals(AGGIUNGILIVELLO)) {
+            frame.getLivellopanel().getLivelloPanel().setVisible(true);
+        }
+
 
 
 

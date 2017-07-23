@@ -8,7 +8,8 @@ public class Utente {
  private int idUtente;
  private String username;
  private String password;
- private String ruolo;  
+ private String ruolo;
+ private int loggato;
 
 
  public Utente() {
@@ -16,11 +17,12 @@ public class Utente {
   }
 
  
- public Utente (int idUtente, String username, String password, String ruolo) {
+ public Utente (int idUtente, String username, String password, String ruolo, int loggato) {
   this.idUtente = idUtente;
   this.username = username;
   this.password = password;
-  this.ruolo = ruolo; 
+  this.ruolo = ruolo;
+  this.loggato = loggato;
  }
 
  public int getIdUtente() {
@@ -55,12 +57,21 @@ public class Utente {
   this.ruolo = ruolo;
  }
 
+ public int getLoggato() {
+  return loggato;
+ }
 
-    public boolean trovabyUserPwd(String username, String password) {
+ public void setLoggato(int loggato) {
+  this.loggato = loggato;
+ }
+
+ public boolean trovabyUserPwd(String username, String password) {
      UtenteDAO uDAO = new UtenteDAO();
      return uDAO.trovabyUserPwd(username,password);
     }
 
-
-
+    public boolean confermalogin(String username, String password) {
+        UtenteDAO utDAO = new UtenteDAO();
+        return utDAO.confermalogin(username, password);
+    }
 }

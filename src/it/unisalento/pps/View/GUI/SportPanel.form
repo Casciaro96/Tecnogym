@@ -20,7 +20,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="4cd91" class="javax.swing.JButton" binding="button1" default-binding="true">
+              <component id="4cd91" class="javax.swing.JButton" binding="basketButton">
                 <constraints/>
                 <properties>
                   <borderPainted value="false"/>
@@ -34,7 +34,7 @@
                   <verticalAlignment value="0"/>
                 </properties>
               </component>
-              <component id="5ac7" class="javax.swing.JButton" default-binding="true">
+              <component id="5ac7" class="javax.swing.JButton" binding="calcioButton">
                 <constraints/>
                 <properties>
                   <borderPainted value="false"/>
@@ -45,7 +45,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="8b18e" class="javax.swing.JButton" default-binding="true">
+              <component id="8b18e" class="javax.swing.JButton" binding="karateButton">
                 <constraints/>
                 <properties>
                   <borderPainted value="false"/>
@@ -76,7 +76,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="337e4" class="javax.swing.JButton" default-binding="true">
+              <component id="337e4" class="javax.swing.JButton" binding="nuotoButton">
                 <constraints/>
                 <properties>
                   <borderPainted value="false"/>
@@ -87,7 +87,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="7f12a" class="javax.swing.JButton" default-binding="true">
+              <component id="7f12a" class="javax.swing.JButton" binding="tennisButton">
                 <constraints/>
                 <properties>
                   <borderPainted value="false"/>
@@ -98,7 +98,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="20a7a" class="javax.swing.JButton" binding="Volley">
+              <component id="20a7a" class="javax.swing.JButton" binding="pallavoloButton">
                 <constraints/>
                 <properties>
                   <borderPainted value="false"/>

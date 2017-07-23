@@ -16,11 +16,7 @@ public class AggiungiDisciplina {
     private JTextField nometxt;
     private JTextField costotxt;
     private JTextArea descrizionetxt;
-    private JTextField numLivelli;
-    private JTextField numTurno;
-    private JTextField nomIstruttore;
     private JButton backButton;
-    private JButton homeButton;
     private JButton confermaButton;
     private JComboBox comboBoxLivello;
     private JComboBox comboBoxTurno;
@@ -73,24 +69,8 @@ public class AggiungiDisciplina {
         return descrizionetxt;
     }
 
-    public JTextField getNumLivelli() {
-        return numLivelli;
-    }
-
-    public JTextField getNumTurno() {
-        return numTurno;
-    }
-
-    public JTextField getNomIstruttore() {
-        return nomIstruttore;
-    }
-
     public JButton getBackButton() {
         return backButton;
-    }
-
-    public JButton getHomeButton() {
-        return homeButton;
     }
 
     public JButton getConfermaButton() {

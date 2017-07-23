@@ -20,7 +20,7 @@ public class GestorePanel {
 
     public GestorePanel() {
         gestorePanel.getUI();
-        gestorePanel.setVisible(true);
+        gestorePanel.setVisible(false);
     }
 
 

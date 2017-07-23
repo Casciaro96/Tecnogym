@@ -2,6 +2,7 @@ package it.unisalento.pps.DAO;
 
 
 import it.unisalento.pps.DbConnection.DbConnection;
+import it.unisalento.pps.Model.IscrizioneDisciplina;
 import it.unisalento.pps.Model.Tesserato;
 
 public class TesseratoDAO {
@@ -30,7 +31,7 @@ public class TesseratoDAO {
 
 
 	}*/
-		
+
 
 	
 }
