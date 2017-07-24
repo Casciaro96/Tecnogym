@@ -47,11 +47,18 @@ public class ActionTesserato implements ActionListener {
             String pagamentodisciplina = frame.getBasketPanel().getComboBoxPagamento().getSelectedItem().toString();
             String stato = "In attesa di approvazione";
 
+<<<<<<< Updated upstream
 
             System.out.println(nomeutente);
             System.out.println(nome);
             boolean esito = t.iscriviti(nomeutente, nome, livellodisciplina, turnodisciplina, pagamentodisciplina, stato);
+=======
+>>>>>>> Stashed changes
 
+            System.out.println(nomeutente);
+            System.out.println(nome);
+            boolean esito = t.iscriviti(nomeutente, nome, livellodisciplina, turnodisciplina, pagamentodisciplina, stato);
+            //TODO e sto esito che fa???
         }
 
     }

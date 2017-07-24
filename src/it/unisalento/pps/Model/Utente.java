@@ -68,7 +68,10 @@ public class Utente {
  public Utente trovabyUserPwd(String username, String password) {
      UtenteDAO uDAO = new UtenteDAO();
      return uDAO.trovabyUserPassword(username, password);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
 
     public boolean confermalogin(String username, String password) {

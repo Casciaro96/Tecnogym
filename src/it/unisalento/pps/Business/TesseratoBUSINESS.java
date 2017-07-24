@@ -1,6 +1,7 @@
 package it.unisalento.pps.Business;
 
 import it.unisalento.pps.Model.IscrizioneDisciplina;
+import it.unisalento.pps.Model.IscrizioneEvento;
 import it.unisalento.pps.Model.Tesserato;
 
 import javax.swing.*;
@@ -38,6 +39,19 @@ public class TesseratoBusiness {
 		is.setStato_iscrizione(stato);
 		//TODO controlli sul fatto che ppsso essere già iscritto
 		boolean risultato = is.iscrizione(is);
+		return true;
+	}
+
+	public boolean iscrivitievento (String nomeevento, String tipo, String stato, String costo, String user, String livello, String turno) {
+		IscrizioneEvento iem = new IscrizioneEvento();
+		iem.setNome(nomeevento);
+		iem.setTipo(tipo);
+		iem.setStato(stato);
+		iem.setCosto(costo);
+		iem.setUsername(user);
+		iem.setLivello(livello);
+		iem.setTurno(turno);
+		boolean esito = iem.iscriviti(iem);
 		return true;
 	}
 

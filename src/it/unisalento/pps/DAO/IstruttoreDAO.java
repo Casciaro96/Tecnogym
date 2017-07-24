@@ -3,6 +3,7 @@ package it.unisalento.pps.DAO;
 
 import it.unisalento.pps.DbConnection.DbConnection;
 import it.unisalento.pps.Model.Istruttore;
+import it.unisalento.pps.Model.Utente;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -30,6 +31,20 @@ public class IstruttoreDAO {
             istruttori.add(istruttore);
         }
         return istruttori;
+    }
+
+    public ArrayList<Utente> elencoeutentidisciplina() {
+        Istruttore tr = new Istruttore();
+        ArrayList<String[]> esito = DbConnection.getInstance().eseguiQuery("SELECT Username FROM iscrizione_disciplina WHERE disciplina='"+tr.getDisciplina()+"'");
+        ArrayList<Utente> utenti = new ArrayList<>();
+        Iterator<String[]> i = esito.iterator();
+        while(i.hasNext()) {
+            String riga[] = i.next();
+            Utente sportivo = new Utente();
+            sportivo.setUsername(riga[1]);
+            utenti.add(sportivo);
+        }
+        return utenti;
     }
 
 

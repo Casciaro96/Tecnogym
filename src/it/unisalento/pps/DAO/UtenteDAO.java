@@ -8,6 +8,7 @@ import it.unisalento.pps.Model.Utente;
 
 public class UtenteDAO {
 
+<<<<<<< Updated upstream
     private static UtenteDAO instance;
 
     public static synchronized UtenteDAO getInstance() {
@@ -57,4 +58,38 @@ public class UtenteDAO {
         }
         return listautente;
     }
+=======
+	private static UtenteDAO instance;
+	public static synchronized UtenteDAO getInstance(){
+		if(instance == null)
+			instance = new UtenteDAO();
+		return instance;
+	}
+
+
+	public boolean trovabyUserPassword(String username, String password)
+	{
+		//Utente u = new Utente();
+		ArrayList<String[]> risultato = DbConnection.getInstance().eseguiQuery("SELECT * FROM Utente WHERE Username='"+username+"' and Password='"+password+"'");
+		if(risultato.isEmpty())
+			return false;
+		else{
+			return true;
+		}
+	}
+	public boolean confermalogindao(String username, String password) {
+
+		String sql = "UPDATE utente SET loggato=1 WHERE username='"+username+"' AND password='"+password+"'";
+		boolean esito = DbConnection.getInstance().eseguiAggiornamento(sql);
+		return esito;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+>>>>>>> Stashed changes
 }
