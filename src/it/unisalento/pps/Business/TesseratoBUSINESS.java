@@ -5,8 +5,9 @@ import it.unisalento.pps.Model.Tesserato;
 
 import javax.swing.*;
 import java.security.KeyStore;
+import java.util.ArrayList;
 
-public class TesseratoBUSINESS {
+public class TesseratoBusiness {
 	
 	public boolean aggiungiTesserato(String username, String password, String nome, String cognome, String email, int recapito, int codicecarta) {
 

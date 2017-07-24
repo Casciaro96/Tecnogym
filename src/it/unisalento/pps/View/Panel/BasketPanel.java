@@ -14,7 +14,8 @@ public class BasketPanel {
     private JButton iscrivitiButton;
     private JButton testimonianzeButton;
     private JComboBox comboBoxPagamento;
-    private String nomedisciplina;
+    private String nomedisciplina = "Basket";
+
 
     public BasketPanel() {
         basketPanel.getUI();

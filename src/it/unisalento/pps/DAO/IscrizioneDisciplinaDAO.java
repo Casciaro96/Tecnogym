@@ -4,8 +4,15 @@ package it.unisalento.pps.DAO;
 import it.unisalento.pps.DbConnection.DbConnection;
 import it.unisalento.pps.Model.IscrizioneDisciplina;
 
-
 public class IscrizioneDisciplinaDAO {
+
+private static IscrizioneDisciplinaDAO instance;
+
+    public static synchronized IscrizioneDisciplinaDAO getInstance() {
+        if(instance == null)
+            instance = new IscrizioneDisciplinaDAO();
+        return instance;
+    }
 
 
     public boolean iscrizionedisciplina(IscrizioneDisciplina is) {

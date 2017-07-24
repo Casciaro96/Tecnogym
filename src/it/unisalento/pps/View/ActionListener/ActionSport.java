@@ -1,5 +1,6 @@
 package it.unisalento.pps.View.ActionListener;
 
+import it.unisalento.pps.Business.LoginBusiness;
 import it.unisalento.pps.View.Frame;
 
 import java.awt.event.ActionEvent;
@@ -32,6 +33,8 @@ public class ActionSport implements ActionListener {
             if (sorgenteEvento.equals(BASKET)) {
                 frame.getBasketPanel().getBasketPanel().setVisible(true);
                 frame.getBasketPanel().setNomedisciplina("Basket");
+                frame.getSportPanel().getSportPanel().setVisible(false);
+
 
             }
 

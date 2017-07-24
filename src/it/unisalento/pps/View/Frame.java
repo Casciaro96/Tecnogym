@@ -36,6 +36,7 @@ public class Frame extends JFrame {
         primaryPanel.setLayout(new BorderLayout());
 
         informazioniPanel.info();
+       // sportPanel.infouser();
 
         centerPanel.add(aggiungiDisciplina.getAggiungiDisciplina());
         centerPanel.add(registrazionePanel.getRegistrazionePanel());
@@ -146,6 +147,9 @@ public class Frame extends JFrame {
         return basketPanel;
     }
 
+    public HomePanel getHomePanel() {
+        return homePanel;
+    }
 
 
     public JPanel getcenterPanel() {

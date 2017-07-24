@@ -1,11 +1,9 @@
 package it.unisalento.pps.View.ActionListener;
 
 
-import it.unisalento.pps.Business.TesseratoBUSINESS;
+import it.unisalento.pps.Business.TesseratoBusiness;
 import it.unisalento.pps.Model.Tesserato;
-import it.unisalento.pps.View.*;
 
-import java.awt.*;
 import it.unisalento.pps.View.Frame;
 
 import java.awt.event.ActionEvent;
@@ -41,15 +39,18 @@ public class ActionTesserato implements ActionListener {
 
         if (sorgenteEvento.equals(ISCRIVITI)) {
 
-            String utente = frame.getSportPanel().getNomeutente();
+            String nomeutente = frame.getSportPanel().getNomeUtente();
             String nome = frame.getBasketPanel().getNomedisciplina();
-            TesseratoBUSINESS t = new TesseratoBUSINESS();
+            TesseratoBusiness t = new TesseratoBusiness();
             String livellodisciplina = frame.getBasketPanel().getComboBoxLivello().getSelectedItem().toString();
             String turnodisciplina = frame.getBasketPanel().getComboBoxTurno().getSelectedItem().toString();
             String pagamentodisciplina = frame.getBasketPanel().getComboBoxPagamento().getSelectedItem().toString();
             String stato = "In attesa di approvazione";
 
-            boolean esito = t.iscriviti(utente, nome, livellodisciplina, turnodisciplina, pagamentodisciplina, stato);
+
+            System.out.println(nomeutente);
+            System.out.println(nome);
+            boolean esito = t.iscriviti(nomeutente, nome, livellodisciplina, turnodisciplina, pagamentodisciplina, stato);
 
         }
 

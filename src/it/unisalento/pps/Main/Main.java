@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
         Frame frame = new Frame();
         //DisciplinaBusiness business = new DisciplinaBusiness();
         //Disciplina disciplina = new Disciplina();

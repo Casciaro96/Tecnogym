@@ -1,6 +1,9 @@
 package it.unisalento.pps.View.Panel;
 
+import it.unisalento.pps.Model.Utente;
+
 import javax.swing.*;
+import it.unisalento.pps.View.Frame;
 
 public class SportPanel {
     private JPanel sportPanel;
@@ -11,20 +14,19 @@ public class SportPanel {
     private JButton tennisButton;
     private JButton pallavoloButton;
 
+
+
+
+    public String nomeUtente;
+
+
+
+
     public SportPanel() {
         sportPanel.getUI();
         sportPanel.setVisible(false);
     }
 
-    String nomeutente;
-
-    public String getNomeutente() {
-        return nomeutente;
-    }
-
-    public void setNomeutente(String nomeutente) {
-        this.nomeutente = nomeutente;
-    }
 
     public JPanel getSportPanel() {
         return sportPanel;
@@ -52,6 +54,14 @@ public class SportPanel {
 
     public JButton getPallavoloButton() {
         return pallavoloButton;
+    }
+
+    public String getNomeUtente() {
+        return nomeUtente;
+    }
+
+    public void setNomeUtente(String nomeUtente) {
+        this.nomeUtente = nomeUtente;
     }
 }
 

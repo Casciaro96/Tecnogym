@@ -65,13 +65,17 @@ public class Utente {
   this.loggato = loggato;
  }
 
- public boolean trovabyUserPwd(String username, String password) {
+ public Utente trovabyUserPwd(String username, String password) {
      UtenteDAO uDAO = new UtenteDAO();
-     return uDAO.trovabyUserPwd(username,password);
+     return uDAO.trovabyUserPassword(username, password);
+
     }
 
     public boolean confermalogin(String username, String password) {
         UtenteDAO utDAO = new UtenteDAO();
-        return utDAO.confermalogin(username, password);
+        return utDAO.confermalogindao(username, password);
     }
+
+
+
 }

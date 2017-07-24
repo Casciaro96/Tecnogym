@@ -8,36 +8,53 @@ import it.unisalento.pps.Model.Utente;
 
 public class UtenteDAO {
 
-	private static UtenteDAO instance;
-	public static synchronized UtenteDAO getInstance(){
-		if(instance == null)
-			instance = new UtenteDAO();
-		return instance;
-	}
+    private static UtenteDAO instance;
+
+    public static synchronized UtenteDAO getInstance() {
+        if (instance == null)
+            instance = new UtenteDAO();
+        return instance;
+    }
 
 
-	public boolean trovabyUserPwd(String username, String password)
-	{
-		//Utente u = new Utente();
-		ArrayList<String[]> risultato = DbConnection.getInstance().eseguiQuery("SELECT * FROM Utente WHERE Username='"+username+"' and Password='"+password+"'");
-		if(risultato.isEmpty())
-			return false;
-		else{
-			return true;
-		}
-	}
-	public boolean confermalogin(String username, String password) {
+    public Utente trovabyUserPassword(String username, String password) {
 
-		String sql = "INSERT INTO Utente(loggato) VALUES('1') WHERE Username='"+username+"'and Password='"+password+"'";
-		boolean esito = DbConnection.getInstance().eseguiAggiornamento(sql);
-		return esito;
-	}
+        ArrayList<String[]> risultato = DbConnection.getInstance().eseguiQuery("SELECT * FROM Utente WHERE Username='" + username + "' and Password='" + password + "'");
+        if (risultato.isEmpty())
+            return null;
 
-	
-	
-	
-	
-	
-	
-	
+        else {
+            Utente u = new Utente();
+            String riga[] = risultato.get(0);
+            u.setUsername(riga[1]);
+            u.setPassword(riga[2]);
+            u.setRuolo(riga[3]);
+            return u;
+        }
+
+
+    }
+
+
+    public boolean confermalogindao(String username, String password) {
+
+        String sql = "UPDATE utente SET loggato=1 WHERE username='" + username + "' AND password='" + password + "'";
+        boolean esito = DbConnection.getInstance().eseguiAggiornamento(sql);
+        return esito;
+    }
+
+    public ArrayList<Utente> findRuolo(String username, String password) {
+        ArrayList<String[]> ris = DbConnection.getInstance().eseguiQuery("SELECT * FROM utente WHERE nome='" + username + "' AND password='" + password + "'");
+        ArrayList<Utente> listautente = new ArrayList<>();
+        Iterator<String[]> i = ris.iterator();
+        while (i.hasNext()) {
+            String riga[] = i.next();
+            Utente u = new Utente();
+            u.setUsername(riga[1]);
+            u.setPassword(riga[2]);
+            u.setRuolo(riga[3]);
+            listautente.add(u);
+        }
+        return listautente;
+    }
 }
