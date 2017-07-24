@@ -15,10 +15,7 @@ public class BasketPanel {
     private JButton testimonianzeButton;
     private JComboBox comboBoxPagamento;
     private String nomedisciplina = "Basket";
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 
     public BasketPanel() {
         basketPanel.getUI();

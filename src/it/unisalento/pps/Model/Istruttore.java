@@ -8,15 +8,13 @@ public class Istruttore extends Utente {
 	private String nome;
 	private String cognome;
 	private String email;
-	private String disciplina;
 	private int recapito;
 	private int stipendio;
 
-	public Istruttore (String nome, String cognome, String email, String disciplina, int recapito, int stipendio) {
+	public Istruttore (String nome, String cognome, String email, int recapito, int stipendio) {
 		this.nome = nome;
 		this.cognome = cognome;
 		this.email = email;
-		this.disciplina = disciplina;
 		this.recapito = recapito;
 		this.stipendio = stipendio;
 		
@@ -60,22 +58,9 @@ public class Istruttore extends Utente {
 		this.stipendio = stipendio;
 	}
 
-	public String getDisciplina() {
-		return disciplina;
-	}
-
-	public void setDisciplina(String disciplina) {
-		this.disciplina = disciplina;
-	}
-
 	public ArrayList<Istruttore> cbIstruttore() {
 		IstruttoreDAO cbIstruttore = new IstruttoreDAO();
 		return cbIstruttore.elencoistruttore();
-	}
-
-	public ArrayList<Utente> userDiIstruttore() {
-		IstruttoreDAO udi = new IstruttoreDAO();
-		return udi.elencoeutentidisciplina();
 	}
 	
 }

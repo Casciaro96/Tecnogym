@@ -3,7 +3,6 @@ package it.unisalento.pps.View.ActionListener;
 
 import it.unisalento.pps.Business.LoginBusiness;
 import it.unisalento.pps.Business.TesseratoBusiness;
-<<<<<<< Updated upstream
 import it.unisalento.pps.Model.Utente;
 import it.unisalento.pps.View.Frame;
 
@@ -12,13 +11,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-=======
-import it.unisalento.pps.View.Frame;
-
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
->>>>>>> Stashed changes
 
 public class ActionHome implements ActionListener {
 
@@ -55,19 +47,11 @@ public class ActionHome implements ActionListener {
                 frame.getSportPanel().getSportPanel().setVisible(true);
                 frame.getLoginPanel().getLoginPanel().setVisible(false);
 
-<<<<<<< Updated upstream
             }
 
             if(ruolo.equals("gestore")) {
                 JOptionPane.showMessageDialog(null, "Gestore loggato con successo");
                 frame.getGestorePanel().getGestorePanel().setVisible(true);
-=======
-            boolean esito = login.loggati(user,pwd);
-
-            if (esito == true) {
-
-                frame.getSportPanel().setNomeUtente(user);
->>>>>>> Stashed changes
                 frame.getLoginPanel().getLoginPanel().setVisible(false);
 
             }
